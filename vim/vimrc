@@ -1,0 +1,18 @@
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+" My plugins
+
+Plug 'tpope/vim-rails'
+Plug 'ctrlpvim/ctrlp.vim'
+
+" Add plugins to &runtimepath
+call plug#end()
+
+set grepprg=ag\ --nogroup\ --nocolor
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+
+" ag is fast enought that CtrlP doesn't need to cache
+let g:ctrlp_use_caching = 0
