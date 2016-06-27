@@ -6,6 +6,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-rails'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-fugitive'     " Git wrapper
+Plug 'slim-template/vim-slim' " Slim syntax highlighting
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -23,3 +26,6 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set number
+
+" molokai config
+let g:molokai_original = 1
