@@ -26,10 +26,22 @@ let g:ctrlp_use_caching = 0
 
 " My config
 
+let mapleader = ","
+
+nmap <Leader>src :source ~/.vimrc<cr>
+map <Leader>i mmgg=G`m
+
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 set number
+set relativenumber
+
+command! Q q " Bind :Q to :q
+command! Qall qall
+command! E e
+command! W w
+command! Wq wq
 
 " molokai config
 let g:molokai_original = 1
