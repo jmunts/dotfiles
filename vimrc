@@ -12,6 +12,7 @@ Plug 'tpope/vim-commentary'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-fugitive'     " Git wrapper
+Plug 'slim-template/vim-slim' " Slim syntax highlighting
 Plug 'scrooloose/syntastic'   " Syntax highlighter
 
 " Add plugins to &runtimepath
