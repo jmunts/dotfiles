@@ -10,10 +10,15 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'thoughtbot/vim-rspec'
-Plug 'tomasr/molokai'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'     " Git wrapper
 Plug 'slim-template/vim-slim' " Slim syntax highlighting
 Plug 'scrooloose/syntastic'   " Syntax highlighter
+Plug 'tpope/vim-eunuch'       " UNIX shell commands
+Plug 'mileszs/ack.vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -39,6 +44,7 @@ set shiftwidth=2
 set expandtab
 set number
 set relativenumber
+set autoread
 set incsearch         " highlight while searching
 set hlsearch          " highlight cll matches after search
 set ignorecase        " case sensitive search pattern matching
@@ -57,5 +63,7 @@ command! E e
 command! W w
 command! Wq wq
 
-" molokai config
-let g:molokai_original = 1
+" hybrid materialize config
+set background=dark
+colorscheme hybrid_material
+let g:airline_theme = "hybrid"
