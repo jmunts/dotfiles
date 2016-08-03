@@ -67,3 +67,6 @@ command! Wq wq
 set background=dark
 colorscheme hybrid_material
 let g:airline_theme = "hybrid"
+" unicode symbols
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
