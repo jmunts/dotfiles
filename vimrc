@@ -19,6 +19,7 @@ Plug 'tpope/vim-eunuch'       " UNIX shell commands
 Plug 'mileszs/ack.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Add plugins to &runtimepath
 call plug#end()
