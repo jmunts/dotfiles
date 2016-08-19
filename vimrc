@@ -23,13 +23,6 @@ Plug 'slashmili/alchemist.vim'
 " Add plugins to &runtimepath
 call plug#end()
 
-set grepprg=ag\ --nogroup\ --nocolor
-" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-
-" ag is fast enought that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
-
 " My config
 
 let mapleader = ","
@@ -62,6 +55,23 @@ command! Qall qall
 command! E e
 command! W w
 command! Wq wq
+
+" Ack.vim
+nnoremap <leader>a :Ack
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag over ack
+  let g:ackprg="ag --vimgrep"
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+
+  " ag is fast enought that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+endif
 
 " hybrid materialize config
 set background=dark
