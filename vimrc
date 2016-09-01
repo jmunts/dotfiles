@@ -4,18 +4,18 @@ call plug#begin('~/.vim/plugged')
 
 " My plugins
 
-Plug 'tpope/vim-rails'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'       " UNIX shell commands
+Plug 'tpope/vim-fugitive'     " Git wrapper
 Plug 'thoughtbot/vim-rspec'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'     " Git wrapper
 Plug 'slim-template/vim-slim' " Slim syntax highlighting
 Plug 'scrooloose/syntastic'   " Syntax highlighter
-Plug 'tpope/vim-eunuch'       " UNIX shell commands
 Plug 'mileszs/ack.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
