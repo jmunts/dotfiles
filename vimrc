@@ -58,7 +58,7 @@ command! W w
 command! Wq wq
 
 " Ack.vim
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack 
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
