@@ -20,6 +20,7 @@ Plug 'mileszs/ack.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'scrooloose/nerdtree'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -32,6 +33,7 @@ nmap <Leader>src :source ~/.vimrc<cr>
 nmap <Leader>gbl :Gblame<cr>
 nmap <Leader>h :nohlsearch<cr>
 map <Leader>i mmgg=G`c
+map <C-n> :NERDTreeToggle<CR>
 
 set softtabstop=2
 set shiftwidth=2
