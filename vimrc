@@ -39,10 +39,10 @@ set expandtab
 set number
 set relativenumber
 set autoread
-set incsearch         " highlight while searching
-set hlsearch          " highlight cll matches after search
-set ignorecase        " case sensitive search pattern matching
-set smartcase         " overrides ignorecase if pattern contains upcase
+set incsearch           " highlight while searching
+set hlsearch            " highlight cll matches after search
+set ignorecase          " case sensitive search pattern matching
+set smartcase           " overrides ignorecase if pattern contains upcase
 set cursorline          " highlight current line
 set cursorcolumn        " highlight current column
 set statusline=%f
