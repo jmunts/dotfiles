@@ -21,6 +21,8 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdtree'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -33,6 +35,7 @@ nmap <Leader>src :source ~/.vimrc<cr>
 nmap <Leader>gbl :Gblame<cr>
 nmap <Leader>h :nohlsearch<cr>
 map <Leader>i mmgg=G`c
+map <Leader>cfp :!echo "%:p" \| pbcopy<CR><CR>
 map <C-n> :NERDTreeToggle<CR>
 
 set softtabstop=2
@@ -85,3 +88,5 @@ let g:airline_theme = "hybrid"
 " unicode symbols
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
+let g:airline#extensions#tabline#enabled = 1
+
