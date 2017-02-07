@@ -1,4 +1,3 @@
-ido.last
-network-security.data
-projectile-bookmarks.eld
-.cask/
+emacs.d/*
+!emacs.d/Cask
+!emacs.d/init.el
