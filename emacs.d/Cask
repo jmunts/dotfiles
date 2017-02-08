@@ -3,6 +3,7 @@
 
 (depends-on "ag")
 (depends-on "cask")
+(depends-on "diff-hl")
 (depends-on "evil")
 (depends-on "evil-surround")
 (depends-on "exec-path-from-shell")
@@ -16,3 +17,4 @@
 (depends-on "paredit")
 (depends-on "projectile")
 (depends-on "projectile-rails")
+(depends-on "smex")

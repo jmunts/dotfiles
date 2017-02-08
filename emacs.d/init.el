@@ -49,3 +49,21 @@
 
 (global-set-key (kbd "C-c v") 'projectile-ag)
 (global-set-key (kbd "C-c C-v") 'hrs/search-project-for-symbol-at-point)
+
+;; Use the diff-hl package to highlight changed-and-uncommitted lines when programming.
+(require 'diff-hl)
+
+(add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
+
+;; Two spaces by characters
+(setq-default tab-width 2)
+
+;; smex for ido in M-x
+(smex-initialize)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
+;; magit bind magit-status globally
+(global-set-key (kbd "C-x g") 'magit-status)
