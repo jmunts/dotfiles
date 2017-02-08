@@ -70,3 +70,13 @@
 
 ;; magit hook to refresh diff-hl after commt
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+
+;; ruby-mode hooks
+(add-hook 'ruby-mode-hook 'flymake-ruby-load)
+(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
+(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+(require 'robe)
+(add-hook 'ruby-mode-hook 'robe-mode)
+(global-company-mode t)
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
