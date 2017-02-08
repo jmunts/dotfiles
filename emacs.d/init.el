@@ -67,3 +67,6 @@
 
 ;; magit bind magit-status globally
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; magit hook to refresh diff-hl after commt
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
