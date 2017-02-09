@@ -2,6 +2,7 @@
 (source melpa)
 
 (depends-on "ag")
+(depends-on "alchemist")
 (depends-on "cask")
 (depends-on "company")
 (depends-on "diff-hl")
@@ -23,4 +24,5 @@
 (depends-on "projectile-rails")
 (depends-on "robe")
 (depends-on "slim-mode")
+(depends-on "smartparens")
 (depends-on "smex")
