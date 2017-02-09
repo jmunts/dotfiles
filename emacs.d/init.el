@@ -77,7 +77,6 @@
 (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
 (require 'robe)
 (add-hook 'ruby-mode-hook 'robe-mode)
-(add-hook 'ruby-mode-hook 'smartparens-mode)
 (global-company-mode t)
 (eval-after-load 'company
   '(push 'company-robe company-backends))
@@ -89,13 +88,8 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
-;; elixir-mode hook
-(add-hook 'elixir-mode-hook 'smartparens-mode)
-
 ;; alchemist
 (require 'alchemist)
 
 ;; smartparens
-(require 'smartparens-ruby)
-(require 'smartparens-elixir)
 (smartparens-global-mode t)
