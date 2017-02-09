@@ -35,6 +35,7 @@
 ;; UI
 (tool-bar-mode 0)
 (menu-bar-mode 0)
+(global-linum-mode t)
 (when window-system
   (scroll-bar-mode -1))
 
