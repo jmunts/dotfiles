@@ -72,6 +72,7 @@
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
 ;; ruby-mode hooks
+(projectile-rails-global-mode)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 (autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
 (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
@@ -80,3 +81,6 @@
 (global-company-mode t)
 (eval-after-load 'company
   '(push 'company-robe company-backends))
+
+;; slim
+(require 'slim-mode)
