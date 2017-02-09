@@ -16,6 +16,7 @@
 (depends-on "inf-ruby")
 (depends-on "magit")
 (depends-on "material-theme")
+(depends-on "neotree")
 (depends-on "pallet")
 (depends-on "paredit")
 (depends-on "projectile")
