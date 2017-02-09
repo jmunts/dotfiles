@@ -89,9 +89,13 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
+;; elixir-mode hook
+(add-hook 'elixir-mode-hook 'smartparens-mode)
+
 ;; alchemist
 (require 'alchemist)
 
 ;; smartparens
 (require 'smartparens-ruby)
+(require 'smartparens-elixir)
 (smartparens-global-mode t)
