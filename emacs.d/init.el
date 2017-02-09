@@ -93,3 +93,7 @@
 
 ;; smartparens
 (smartparens-global-mode t)
+
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
