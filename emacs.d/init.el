@@ -39,7 +39,7 @@
 (when window-system
   (scroll-bar-mode -1))
 
-(load-theme 'material t)
+(load-theme 'arjen-grey t)
 
 ;; Projectile
 (defun hrs/search-project-for-symbol-at-point ()
@@ -98,3 +98,7 @@
 ;; yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;; gc threshold
+(setq gc-cons-threshold 50000000)
+(setq gnutls-min-prime-bits 4096)
