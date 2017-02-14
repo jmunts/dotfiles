@@ -52,6 +52,7 @@
 ;; projectile
 (use-package projectile
   :ensure t
+  :diminish projectile-mode
   :config (projectile-mode 1))
 
 ;; ido
@@ -71,3 +72,40 @@
   :ensure t
   :init (setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
   :config (ido-vertical-mode 1))
+
+;; magit
+(use-package magit
+  :ensure t
+  :diminish auto-revert-mode
+  :commands (magit-status magit-checkout)
+  :bind (("C-x g" . magit-status)))
+
+;; diff - diff highlighting in gutter
+(use-package diff-hl
+  :ensure t
+  :commands (turn-on-diff-hl-mode diff-hl-magit-post-refresh)
+  :init (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+        (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
+        (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
+
+;; smex - ido for M-x
+(use-package smex
+  :ensure t
+  :config (smex-initialize)
+          (global-set-key (kbd "M-x") 'smex)
+          (global-set-key (kbd "M-X") 'smex-major-mode-commands))
+
+;; ruby
+(use-package projectile-rails
+  :ensure t
+  :config (projectile-rails-global-mode 1))
+
+;; slim
+(use-package slim-mode
+  :ensure t)
+
+;; yasnippet
+(use-package yasnippet
+  :ensure t
+  :diminish yas-minor-mode
+  :config (yas-global-mode 1))
