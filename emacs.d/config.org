@@ -1,0 +1,80 @@
+#+TITLE:  Emacs Configuration
+#+AUTHOR: John Mark Untalan
+#+EMAIL:  johnmarkuntalan@gmail.com
+
+* Introduction
+
+	This is my main configuration file that is written in literate style.
+
+* General Configuration
+
+** Modernizing Emacs
+
+   Based on [[https://github.com/howardabrams/dot-files/blob/master/emacs.org#modernizing-emacs][Howard Abrams' emacs config]]
+
+   #+BEGIN_SRC elisp :tangle yes
+	   (setq gc-cons-threshold 50000000)
+   #+END_SRC
+
+** Package
+
+   Set package archives
+
+   #+BEGIN_SRC elisp :tangle yes
+     (require 'package)
+     (setq package-archives '(("org"       . "http://orgmode.org/elpa/")
+                              ("gnu"       . "http://elpa.gnu.org/packages/")
+                              ("melpa"     . "http://melpa.org/packages/")
+                              ("marmalade" . "http://marmalade-repo.org/packages/")))
+     (package-initialize)
+     (package-refresh-contents)
+   #+END_SRC
+
+   Use [[https://github.com/jwiegley/use-package][use-package]]
+
+   #+BEGIN_SRC elisp :tangle yes
+     (unless (package-installed-p 'use-package)
+       (package-refresh-contents)
+       (package-install 'use-package))
+
+     (require 'use-package)
+   #+END_SRC
+   
+** Indentation
+
+   #+BEGIN_SRC elisp :tangle yes
+     (setq-default indent-tabs-mode nil)
+     (setq tab-width 2)
+   #+END_SRC
+
+** UI
+
+  #+BEGIN_SRC elisp :tangle yes
+    (when (window-system)
+      (tool-bar-mode 0)               ;; Toolbars were only cool with XEmacs
+      (when (fboundp 'horizontal-scroll-bar-mode)
+        (horizontal-scroll-bar-mode -1))
+      (scroll-bar-mode -1))            ;; Scrollbars are waste screen estate
+  #+END_SRC
+
+
+** To Sort
+
+  Emacs' default value for showing the keystrokes is 1 second which is long enough, so..
+
+  #+BEGIN_SRC elisp :tangle yes
+    (setq echo-keystrokes 0.5)
+  #+END_SRC
+
+  Make yes-or-no prompts shorter(y-or-n)
+
+  #+BEGIN_SRC elisp :tangle yes
+    (fset 'yes-or-no-p 'y-or-n-p)
+  #+END_SRC
+
+  Insert emacs' custom config in other file
+
+  #+BEGIN_SRC elisp :tangle yes
+    (setq custom-file "~/.emacs.d/etc/custom.el")
+    (load custom-file)
+  #+END_SRC
