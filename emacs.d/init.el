@@ -43,6 +43,10 @@
 (setq custom-file "custom.el")
 (load custom-file)
 
+;; winner-mode
+(use-package winner
+  :config (winner-mode 1))
+
 ;; zerodark-theme
 (use-package zerodark-theme
   :ensure t
