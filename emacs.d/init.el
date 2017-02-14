@@ -30,6 +30,9 @@
     (horizontal-scroll-bar-mode -1))
   (scroll-bar-mode -1))            ;; Scrollbars are waste screen estate
 
+;; navigation
+(windmove-default-keybindings)
+
 ;; emacs' default keystore is 1 sec(too slow)
 (setq echo-keystrokes 0.5)
 
@@ -43,4 +46,28 @@
 ;; zerodark-theme
 (use-package zerodark-theme
   :ensure t
-  :defer t)
+  :config (load-theme 'zerodark t)
+          (zerodark-setup-modeline-format))
+
+;; projectile
+(use-package projectile
+  :ensure t
+  :config (projectile-mode 1))
+
+;; ido
+(use-package ido
+  :ensure t
+  :init (setq ido-enable-flex-matching t
+              ido-everywhere t)
+  :config (ido-mode 1)
+          (ido-everywhere 1))
+
+(use-package flx-ido
+  :ensure t
+  :init (setq ido-enable-flex-matching t)
+  :config (flx-ido-mode 1))
+
+(use-package ido-vertical-mode
+  :ensure t
+  :init (setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
+  :config (ido-vertical-mode 1))
