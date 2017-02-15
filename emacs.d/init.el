@@ -44,7 +44,7 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 
 ;; moved emacs' custom config location
-(setq custom-file "custom.el")
+(setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
 ;; winner-mode
