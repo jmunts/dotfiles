@@ -39,6 +39,9 @@
 ;; yes and no are too long, use y or n
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; i always accidentally close emacs, so prompt y or n when quiting emacs
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ;; moved emacs' custom config location
 (setq custom-file "custom.el")
 (load custom-file)
