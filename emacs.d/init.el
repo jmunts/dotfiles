@@ -146,3 +146,17 @@
   :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
           (setq neo-smart-open t))
 
+;; html, css, js, jsx
+(use-package web-mode
+  :ensure t)
+
+(use-package emmet-mode
+  :ensure t
+  :commands emmet-mode
+  :init
+  (setq emmet-indentation 2)
+  (setq emmet-move-cursor-between-quotes t)
+  :config
+  (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+  (add-hook 'css-mode-hook  'emmet-mode)) ;; enable Emmet's css abbreviation.
+
