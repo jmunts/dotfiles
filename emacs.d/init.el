@@ -24,6 +24,7 @@
 (setq gc-cons-threshold 50000000)
 
 ;; UI
+(global-linum-mode t)
 (when (window-system)
   (tool-bar-mode 0)               ;; Toolbars were only cool with XEmacs
   (when (fboundp 'horizontal-scroll-bar-mode)
