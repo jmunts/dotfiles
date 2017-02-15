@@ -94,6 +94,10 @@
   :init (setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
   :config (ido-vertical-mode 1))
 
+(use-package ido-ubiquitous
+  :ensure t
+  :config (ido-ubiquitous-mode 1))
+
 ;; magit
 (use-package magit
   :ensure t
