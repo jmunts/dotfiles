@@ -62,6 +62,19 @@
   :diminish projectile-mode
   :config (projectile-mode 1))
 
+;; exec-path-from-shell
+(use-package exec-path-from-shell
+  :ensure t
+  :config (when (memq window-system '(mac ns))
+            (exec-path-from-shell-initialize)))
+
+;; ag
+(use-package ag
+  :ensure t
+  :commands ag
+  :init (setq ag-highlight-search t)
+  :config (add-to-list 'ag-arguments "--word-regexp"))
+
 ;; ido
 (use-package ido
   :ensure t
