@@ -146,7 +146,7 @@
   :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
           (setq neo-smart-open t))
 
-;; html, css, js, jsx
+;; html, css
 (use-package web-mode
   :ensure t)
 
@@ -159,4 +159,16 @@
   :config
   (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
   (add-hook 'css-mode-hook  'emmet-mode)) ;; enable Emmet's css abbreviation.
+
+;; js
+(use-package js2-mode
+  :ensure t
+  :init
+  (setq js-basic-indent 2)
+  (setq-default js2-basic-indent 2
+                js2-basic-offset 2
+                js2-auto-indent-p t
+                js2-cleanup-whitespace t
+                js2-enter-indents-newline t
+                js2-indent-on-enter-key t))
 
