@@ -31,6 +31,10 @@
     (horizontal-scroll-bar-mode -1))
   (scroll-bar-mode -1))            ;; Scrollbars are waste screen estate
 
+;; show parenthesis pls
+(show-paren-mode 1)
+(setq show-paren-delay 0) ;; no delay
+
 ;; navigation
 (windmove-default-keybindings)
 
