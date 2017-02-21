@@ -84,6 +84,7 @@
 ;; helm - http://tuhdo.github.io/helm-intro.html
 (use-package helm
   :ensure t
+  :diminish helm-mode
   :init (progn
           (use-package helm-config)
           (setq helm-M-x-fuzzy-match        t
