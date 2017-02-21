@@ -35,6 +35,26 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0) ;; no delay
 
+;; paredit
+(use-package paredit
+  :ensure t
+  :init
+    (add-hook 'emacs-lisp-mode-hook 'paredit-mode))
+
+;; wrap-region
+(use-package wrap-region
+  :ensure   t
+  :diminish wrap-region-mode
+  :config
+  (wrap-region-global-mode t)
+  (wrap-region-add-wrappers
+   '(("(" ")")
+     ("[" "]")
+     ("{" "}")
+     ("<" ">")
+     ("'" "'")
+     ("\"" "\""))))
+
 ;; navigation
 (windmove-default-keybindings)
 
