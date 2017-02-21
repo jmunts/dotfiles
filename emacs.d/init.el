@@ -89,6 +89,10 @@
                 helm-buffers-fuzzy-matching t
                 helm-recentf-fuzzy-match    t)
           (helm-mode 1))
+  :config (progn
+            (helm-autoresize-mode t)
+            (setq helm-autoresize-max-height 20
+                  helm-autoresize-min-height 20))
   :bind (("M-x" . helm-M-x)
          ("C-x b" . helm-mini)
          ("C-x C-f" . helm-find-files)))
