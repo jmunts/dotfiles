@@ -175,3 +175,8 @@
 (use-package expand-region
   :ensure t
   :bind (("C-=" . er/expand-region)))
+
+;; tramp
+(use-package tramp
+  :ensure t
+  :config (setq tramp-default-method "ssh"))
