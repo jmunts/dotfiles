@@ -65,7 +65,8 @@
 (use-package projectile
   :ensure t
   :diminish projectile-mode
-  :config (projectile-mode 1))
+  :config (projectile-mode 1)
+          (setq projectile-completion-system 'helm))
 
 ;; exec-path-from-shell
 (use-package exec-path-from-shell
@@ -92,9 +93,19 @@
   :config (progn
             (helm-autoresize-mode t)
             (setq helm-autoresize-max-height 20
-                  helm-autoresize-min-height 20))
-  :bind (("M-x" . helm-M-x)
-         ("C-x b" . helm-mini)
+                  helm-autoresize-min-height 20)
+            (use-package helm-projectile
+              :ensure t
+              :init (helm-projectile-on))
+            (use-package helm-ag
+              :ensure t)
+            (use-package helm-descbinds
+              :ensure t
+              :init (helm-descbinds-mode)))
+  :bind (("M-x"     . helm-M-x)
+         ("M-y"     . helm-show-kill-ring)
+         ("C-x b"   . helm-mini)
+         ("C-c h o" . helm-occur)
          ("C-x C-f" . helm-find-files)))
 
 ;; magit
