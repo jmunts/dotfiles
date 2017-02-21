@@ -80,27 +80,18 @@
   :init (setq ag-highlight-search t)
   :config (add-to-list 'ag-arguments "--word-regexp"))
 
-;; ido
-(use-package ido
+;; helm - http://tuhdo.github.io/helm-intro.html
+(use-package helm
   :ensure t
-  :init (setq ido-enable-flex-matching t
-              ido-everywhere t)
-  :config (ido-mode 1)
-          (ido-everywhere 1))
-
-(use-package flx-ido
-  :ensure t
-  :init (setq ido-enable-flex-matching t)
-  :config (flx-ido-mode 1))
-
-(use-package ido-vertical-mode
-  :ensure t
-  :init (setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
-  :config (ido-vertical-mode 1))
-
-(use-package ido-ubiquitous
-  :ensure t
-  :config (ido-ubiquitous-mode 1))
+  :init (progn
+          (use-package helm-config)
+          (setq helm-M-x-fuzzy-match        t
+                helm-buffers-fuzzy-matching t
+                helm-recentf-fuzzy-match    t)
+          (helm-mode 1))
+  :bind (("M-x" . helm-M-x)
+         ("C-x b" . helm-mini)
+         ("C-x C-f" . helm-find-files)))
 
 ;; magit
 (use-package magit
@@ -116,13 +107,6 @@
   :init (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
         (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
         (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
-
-;; smex - ido for M-x
-(use-package smex
-  :ensure t
-  :config (smex-initialize)
-          (global-set-key (kbd "M-x") 'smex)
-          (global-set-key (kbd "M-X") 'smex-major-mode-commands))
 
 ;; ruby
 (use-package projectile-rails
