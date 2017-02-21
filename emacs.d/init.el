@@ -129,6 +129,12 @@
   :ensure t
   :config (projectile-rails-global-mode 1))
 
+;; smartparens
+(use-package smartparens
+  :ensure t
+  :init (add-hook 'ruby-mode-hook 'smartparens-strict-mode)
+  :diminish smartparens-mode)
+
 ;; slim
 (use-package slim-mode
   :ensure t)
