@@ -186,3 +186,8 @@
   :bind (("C-:" . avy-goto-char)
          ("C-'" . avy-goto-char-2))
   :config (setq avy-background t))
+
+;; expand-region
+(use-package expand-region
+  :ensure t
+  :bind (("C-=" . er/expand-region)))
