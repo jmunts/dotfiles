@@ -179,3 +179,10 @@
 ;; iedit
 (use-package iedit
   :ensure t)
+
+;; avy
+(use-package avy
+  :ensure t
+  :bind (("C-:" . avy-goto-char)
+         ("C-'" . avy-goto-char-2))
+  :config (setq avy-background t))
