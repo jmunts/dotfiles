@@ -159,6 +159,15 @@
 (use-package slim-mode
   :ensure t)
 
+;; haml
+(use-package haml-mode
+  :ensure t)
+
+;; flycheck
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
 ;; yasnippet
 (use-package yasnippet
   :ensure t
