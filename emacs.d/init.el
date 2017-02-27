@@ -256,3 +256,12 @@
   :ensure t
   :commands alchemist-mode)
 
+(use-package elfeed
+  :ensure t
+  :bind ("C-x w" . elfeed)
+  :config (setq elfeed-feeds
+                '(("http://elixirstatus.com/rss" elixir elixirstatus)
+                  ("https://www.erlang-solutions.com/news.rss" elixir news)
+                  ("https://www.learnelixir.tv/feed/5b2f0e84-7e3b-4100-9b56-230831c76c8d" elixir learnelixir)
+                  ("https://www.learnphoenix.tv/feed/27bcceba-6382-4f16-b910-e59f2577cd25" elixir phoenix learnphoenix))))
+
