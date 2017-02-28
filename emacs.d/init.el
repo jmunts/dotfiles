@@ -201,7 +201,8 @@
 
 ;; html, css
 (use-package web-mode
-  :ensure t)
+  :ensure t
+  :mode ("\\.jsx\\'" . web-mode))
 
 (use-package emmet-mode
   :ensure t
