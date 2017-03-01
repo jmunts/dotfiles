@@ -265,3 +265,5 @@
                   ("https://www.learnelixir.tv/feed/5b2f0e84-7e3b-4100-9b56-230831c76c8d" elixir learnelixir)
                   ("https://www.learnphoenix.tv/feed/27bcceba-6382-4f16-b910-e59f2577cd25" elixir phoenix learnphoenix))))
 
+(setq-default elfeed-search-filter "@6-months-ago")
+
