@@ -261,6 +261,8 @@
   :ensure t
   :commands alchemist-mode)
 
+;; elfeed
+
 (use-package elfeed
   :ensure t
   :bind ("C-x w" . elfeed)
