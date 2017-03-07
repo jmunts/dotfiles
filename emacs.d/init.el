@@ -149,6 +149,10 @@
   :ensure t
   :config (projectile-rails-global-mode 1))
 
+;; yaml
+(use-package yaml-mode
+  :ensure t)
+
 ;; smartparens
 (use-package smartparens
   :ensure t
