@@ -35,6 +35,9 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0) ;; no delay
 
+;; desktop save session
+(desktop-save-mode 1)
+
 ;; paredit
 (use-package paredit
   :ensure t
@@ -281,3 +284,4 @@
   :config (progn
             (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
             (setq highlight-indent-guides-method 'character)))
+
