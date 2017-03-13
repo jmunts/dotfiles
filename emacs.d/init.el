@@ -89,7 +89,8 @@
   :ensure t
   :diminish projectile-mode
   :config (projectile-mode 1)
-          (setq projectile-completion-system 'helm))
+  (setq projectile-completion-system 'helm)
+  (setq projectile-enable-caching t))
 
 ;; exec-path-from-shell
 (use-package exec-path-from-shell
