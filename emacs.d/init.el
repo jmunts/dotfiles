@@ -153,6 +153,15 @@
   :ensure t
   :config (projectile-rails-global-mode 1))
 
+;; rspec
+(use-package rspec-mode
+  :ensure t)
+
+;; rubocop - rubocop gem is required
+(use-package rubocop
+  :ensure t
+  :init (add-hook 'ruby-mode-hook 'rubocop-mode))
+
 ;; yaml
 (use-package yaml-mode
   :ensure t)
