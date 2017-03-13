@@ -133,6 +133,13 @@
          ("C-c h o" . helm-occur)
          ("C-x C-f" . helm-find-files)))
 
+;; helm-swoop
+(use-package helm-swoop
+  :ensure t
+  :bind ("M-i" . helm-swoop)
+  )
+(setq helm-swoop-split-with-multiple-windows t)
+
 ;; magit
 (use-package magit
   :ensure t
