@@ -301,3 +301,9 @@
             (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
             (setq highlight-indent-guides-method 'character)))
 
+;; text scale mode
+(use-package default-text-scale
+  :ensure t
+  :bind (("C-M-=" . default-text-scale-increase)
+         ("C-M--" . default-text-scale-decrease)))
+
