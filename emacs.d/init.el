@@ -7,7 +7,8 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")))
 
 (package-initialize)
-(package-refresh-contents)
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 ;; use use-package
 (unless (package-installed-p 'use-package)
