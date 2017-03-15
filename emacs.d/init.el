@@ -307,3 +307,6 @@
   :bind (("C-M-=" . default-text-scale-increase)
          ("C-M--" . default-text-scale-decrease)))
 
+;; emacs profiler
+(use-package esup
+  :ensure t)
