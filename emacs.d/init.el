@@ -178,8 +178,10 @@
 ;; smartparens
 (use-package smartparens
   :ensure t
-  :init (add-hook 'ruby-mode-hook 'smartparens-strict-mode)
-        (add-hook 'elixir-mode-hook 'smartparens-strict-mode)
+  :init
+  (add-hook 'ruby-mode-hook   'smartparens-strict-mode)
+  (add-hook 'elixir-mode-hook 'smartparens-strict-mode)
+  (add-hook 'js2-mode-hook    'smartparens-strict-mode)
   :diminish smartparens-mode)
 
 ;; slim
