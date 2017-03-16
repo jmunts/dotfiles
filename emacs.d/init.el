@@ -228,7 +228,10 @@
 ;; html, css
 (use-package web-mode
   :ensure t
-  :mode ("\\.jsx\\'" . web-mode))
+  :mode
+  ("\\.jsx\\'" . web-mode)
+  ("\\.eex\\'" . web-mode)
+  ("\\.erb\\'" . web-mode))
 
 (use-package emmet-mode
   :ensure t
