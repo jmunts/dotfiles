@@ -18,8 +18,9 @@
 (require 'use-package)
 
 ;; indentation
-(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
 (setq tab-width 2)
+(setq standard-indent 2)
 
 ;; increased garbage collection threshold
 (setq gc-cons-threshold 50000000)
@@ -232,6 +233,11 @@
   ("\\.jsx\\'" . web-mode)
   ("\\.eex\\'" . web-mode)
   ("\\.erb\\'" . web-mode))
+
+
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
 
 (use-package emmet-mode
   :ensure t
