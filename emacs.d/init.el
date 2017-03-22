@@ -36,9 +36,6 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0) ;; no delay
 
-;; desktop save session
-(desktop-save-mode 1)
-
 ;; paredit
 (use-package paredit
   :ensure t
