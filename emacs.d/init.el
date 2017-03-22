@@ -18,8 +18,9 @@
 (require 'use-package)
 
 ;; indentation
-(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
 (setq tab-width 2)
+(setq standard-indent 2)
 
 ;; increased garbage collection threshold
 (setq gc-cons-threshold 50000000)
@@ -174,8 +175,10 @@
 ;; smartparens
 (use-package smartparens
   :ensure t
-  :init (add-hook 'ruby-mode-hook 'smartparens-strict-mode)
-        (add-hook 'elixir-mode-hook 'smartparens-strict-mode)
+  :init
+  (add-hook 'ruby-mode-hook   'smartparens-strict-mode)
+  (add-hook 'elixir-mode-hook 'smartparens-strict-mode)
+  (add-hook 'js2-mode-hook    'smartparens-strict-mode)
   :diminish smartparens-mode)
 
 ;; slim
@@ -225,7 +228,15 @@
 ;; html, css
 (use-package web-mode
   :ensure t
-  :mode ("\\.jsx\\'" . web-mode))
+  :mode
+  ("\\.jsx\\'" . web-mode)
+  ("\\.eex\\'" . web-mode)
+  ("\\.erb\\'" . web-mode))
+
+
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
 
 (use-package emmet-mode
   :ensure t
@@ -241,7 +252,6 @@
 (use-package js2-mode
   :ensure t
   :init
-  (setq js-basic-indent 2)
   (setq-default js2-basic-indent 2
                 js2-basic-offset 2
                 js2-auto-indent-p t
