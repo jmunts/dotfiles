@@ -23,6 +23,9 @@
 (setq tab-width 2)
 (setq standard-indent 2)
 
+;; js mode
+(setq js-indent-level 2)
+
 ;; increased garbage collection threshold
 (setq gc-cons-threshold 50000000)
 
