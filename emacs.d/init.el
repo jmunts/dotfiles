@@ -349,3 +349,11 @@ Version 2017-01-27"
        (progn
          (message "File path copied: 「%s」" -fpath)
          -fpath )))))
+
+
+;; extra
+(use-package speed-type
+  :ensure t)
+
+(setq speed-type--gb-url-format
+  "http://www.gutenberg.org/cache/epub/%d/pg%d.txt")
