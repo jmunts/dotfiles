@@ -370,3 +370,10 @@ Version 2017-01-27"
 
 ;; lorem ipsum
 (use-package lorem-ipsum)
+
+;; speed type
+(use-package speed-type
+  :ensure t)
+
+(setq speed-type--gb-url-format
+  "http://www.gutenberg.org/cache/epub/%d/pg%d.txt")
