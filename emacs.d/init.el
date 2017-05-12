@@ -349,3 +349,22 @@ Version 2017-01-27"
        (progn
          (message "File path copied: 「%s」" -fpath)
          -fpath )))))
+
+
+;; elm-mode dependencies
+(use-package f
+  :ensure t)
+
+(use-package let-alist
+  :ensure t)
+
+(use-package s
+  :ensure t)
+;; elm
+(use-package elm-mode
+  :ensure t)
+
+(setq elm-format-on-save t)
+
+;; lorem ipsum
+(use-package lorem-ipsum)
