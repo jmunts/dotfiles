@@ -6,6 +6,8 @@
                          ("melpa"     . "http://melpa.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")))
 
+(setq org-modules '(org-drill))
+
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
