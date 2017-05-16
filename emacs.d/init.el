@@ -6,7 +6,6 @@
                          ("melpa"     . "http://melpa.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")))
 
-(setq org-modules '(org-drill))
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -30,6 +29,8 @@
 
 ;; increased garbage collection threshold
 (setq gc-cons-threshold 50000000)
+
+(setq org-modules '(org-drill))
 
 ;; UI
 (global-linum-mode t)
