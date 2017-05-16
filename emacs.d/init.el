@@ -44,6 +44,12 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0) ;; no delay
 
+;; whick-key
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode))
+
 ;; paredit
 (use-package paredit
   :ensure t
