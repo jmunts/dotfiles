@@ -389,3 +389,7 @@ Version 2017-01-27"
 
 (setq speed-type--gb-url-format
   "http://www.gutenberg.org/cache/epub/%d/pg%d.txt")
+
+;; experimental speed up magit
+(setq magit-commit-show-diff nil
+      magit-revert-buffers 1)
