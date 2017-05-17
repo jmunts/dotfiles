@@ -44,8 +44,10 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0) ;; no delay
 
-(global-set-key (kbd "C-c o")
+(global-set-key (kbd "C-c t")
                 (lambda () (interactive) (find-file "~/Dropbox/org/todo.org")))
+(global-set-key (kbd "C-c s")
+                (lambda () (interactive) (find-file "~/Dropbox/org/scratch.org")))
 
 ;; whick-key
 (use-package which-key
