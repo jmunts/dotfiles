@@ -32,6 +32,9 @@
 
 (setq org-modules '(org-drill))
 
+;; ansi-term
+(setq term-buffer-maximum-size 0)
+
 ;; UI
 (global-linum-mode t)
 (when (window-system)
