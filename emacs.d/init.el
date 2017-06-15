@@ -328,7 +328,8 @@
                   ("https://emacs.cafe/feed.xml" emacs)
                   ("http://ergoemacs.org/emacs/blog.xml" emacs)
                   ("http://taylonr.com/feed/" blog)
-                  ("http://confreaks.tv/confreaks-videos.atom" confreaks conf))))
+                  ("http://confreaks.tv/confreaks-videos.atom" confreaks conf)
+                  ("https://www.vbi.net/blog/feed/" elixir blog))))
 
 (setq-default elfeed-search-filter "@6-months-ago")
 
