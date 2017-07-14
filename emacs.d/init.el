@@ -1,3 +1,5 @@
+;;; init.el ---  jmunts' Emacs init file
+
 ;; set package archive source
 (require 'package)
 
@@ -402,3 +404,45 @@ Version 2017-01-27"
 ;; experimental speed up magit
 (setq magit-commit-show-diff nil
       magit-revert-buffers 1)
+
+;; boon - modal editing
+;; (use-package boon
+;;   :ensure t)
+;; (use-package boon-qwerty
+;;   :ensure t)
+;; (use-package powerline
+;;   :ensure t)
+;; (use-package boon-powerline
+;;   :ensure t)
+;; (boon-powerline-theme)
+
+;; evil
+(use-package evil
+  :ensure t)
+(evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
+(evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+(evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "R") 'neotree-refresh)
+(evil-define-key 'normal neotree-mode-map (kbd "a") 'neotree-stretch-toggle)
+(evil-define-key 'normal neotree-mode-map (kbd "r") 'neotree-rename-node)
+(evil-define-key 'normal neotree-mode-map (kbd "c") 'neotree-create-node)
+(evil-define-key 'normal neotree-mode-map (kbd "d") 'neotree-delete-node)
+(evil-define-key 'normal neotree-mode-map (kbd "h") 'neotree-hidden-file-toggle)
+(evil-mode 1)
+
+;; markdown
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
+(use-package markdown-preview-mode
+  :ensure t)
+
+
+(provide 'init)
+;;; init.el ends here
