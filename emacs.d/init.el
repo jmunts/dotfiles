@@ -230,8 +230,7 @@
 (use-package neotree
   :ensure t
   :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-  (setq neo-smart-open t)
-  (setq neo-window-width 40))
+  (setq neo-smart-open t))
 
 (defun neotree-project-dir ()
   "Open NeoTree using the git root."
