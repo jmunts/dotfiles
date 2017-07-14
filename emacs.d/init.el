@@ -429,6 +429,9 @@ Version 2017-01-27"
 (evil-define-key 'normal neotree-mode-map (kbd "c") 'neotree-create-node)
 (evil-define-key 'normal neotree-mode-map (kbd "d") 'neotree-delete-node)
 (evil-define-key 'normal neotree-mode-map (kbd "h") 'neotree-hidden-file-toggle)
+
+(evil-define-key 'normal helm-ag-mode-map (kbd "q") 'quit-window)
+(evil-define-key 'normal helm-ag-mode-map (kbd "o") 'helm-ag-mode-jump-other-window)
 (evil-mode 1)
 
 ;; markdown
