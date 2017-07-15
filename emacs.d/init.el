@@ -1,3 +1,5 @@
+;;; init.el ---  jmunts' Emacs init file
+
 ;; set package archive source
 (require 'package)
 
@@ -230,7 +232,7 @@
 (use-package neotree
   :ensure t
   :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-          (setq neo-smart-open t))
+  (setq neo-smart-open t))
 
 (defun neotree-project-dir ()
   "Open NeoTree using the git root."
@@ -323,7 +325,13 @@
                 '(("http://elixirstatus.com/rss" elixir elixirstatus)
                   ("https://www.erlang-solutions.com/news.rss" elixir news)
                   ("https://www.learnelixir.tv/feed/5b2f0e84-7e3b-4100-9b56-230831c76c8d" elixir learnelixir)
-                  ("https://www.learnphoenix.tv/feed/27bcceba-6382-4f16-b910-e59f2577cd25" elixir phoenix learnphoenix))))
+                  ("https://www.learnphoenix.tv/feed/27bcceba-6382-4f16-b910-e59f2577cd25" elixir phoenix learnphoenix)
+                  ("https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA" ted)
+                  ("https://emacs.cafe/feed.xml" emacs)
+                  ("http://ergoemacs.org/emacs/blog.xml" emacs)
+                  ("http://taylonr.com/feed/" blog)
+                  ("http://confreaks.tv/confreaks-videos.atom" confreaks conf)
+                  ("https://www.vbi.net/blog/feed/" elixir blog))))
 
 (setq-default elfeed-search-filter "@6-months-ago")
 
@@ -396,3 +404,48 @@ Version 2017-01-27"
 ;; experimental speed up magit
 (setq magit-commit-show-diff nil
       magit-revert-buffers 1)
+
+;; boon - modal editing
+;; (use-package boon
+;;   :ensure t)
+;; (use-package boon-qwerty
+;;   :ensure t)
+;; (use-package powerline
+;;   :ensure t)
+;; (use-package boon-powerline
+;;   :ensure t)
+;; (boon-powerline-theme)
+
+;; evil
+(use-package evil
+  :ensure t)
+(evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
+(evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+(evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "R") 'neotree-refresh)
+(evil-define-key 'normal neotree-mode-map (kbd "a") 'neotree-stretch-toggle)
+(evil-define-key 'normal neotree-mode-map (kbd "r") 'neotree-rename-node)
+(evil-define-key 'normal neotree-mode-map (kbd "c") 'neotree-create-node)
+(evil-define-key 'normal neotree-mode-map (kbd "d") 'neotree-delete-node)
+(evil-define-key 'normal neotree-mode-map (kbd "h") 'neotree-hidden-file-toggle)
+
+(evil-define-key 'normal helm-ag-mode-map (kbd "q") 'quit-window)
+(evil-define-key 'normal helm-ag-mode-map (kbd "o") 'helm-ag-mode-jump-other-window)
+(evil-mode 1)
+
+;; markdown
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
+(use-package markdown-preview-mode
+  :ensure t)
+
+
+(provide 'init)
+;;; init.el ends here
