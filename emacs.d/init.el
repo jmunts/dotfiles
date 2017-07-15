@@ -53,10 +53,10 @@
                 (lambda () (interactive) (find-file "~/Dropbox/org/scratch.org")))
 
 ;; whick-key
-(use-package which-key
-  :ensure t
-  :config
-  (which-key-mode))
+;; (use-package which-key
+;;   :ensure t
+;;   :config
+;;   (which-key-mode))
 
 ;; paredit
 (use-package paredit
