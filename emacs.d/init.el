@@ -417,24 +417,25 @@ Version 2017-01-27"
 ;; (boon-powerline-theme)
 
 ;; evil
-(use-package evil
-  :ensure t)
-(evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
-(evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
-(evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
-(evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
-(evil-define-key 'normal neotree-mode-map (kbd "R") 'neotree-refresh)
-(evil-define-key 'normal neotree-mode-map (kbd "a") 'neotree-stretch-toggle)
-(evil-define-key 'normal neotree-mode-map (kbd "r") 'neotree-rename-node)
-(evil-define-key 'normal neotree-mode-map (kbd "c") 'neotree-create-node)
-(evil-define-key 'normal neotree-mode-map (kbd "d") 'neotree-delete-node)
-(evil-define-key 'normal neotree-mode-map (kbd "h") 'neotree-hidden-file-toggle)
+;; (use-package evil
+;;   :ensure t)
+;; (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+;; (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
+;; (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+;; (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+;; (evil-define-key 'normal neotree-mode-map (kbd "R") 'neotree-refresh)
+;; (evil-define-key 'normal neotree-mode-map (kbd "a") 'neotree-stretch-toggle)
+;; (evil-define-key 'normal neotree-mode-map (kbd "r") 'neotree-rename-node)
+;; (evil-define-key 'normal neotree-mode-map (kbd "c") 'neotree-create-node)
+;; (evil-define-key 'normal neotree-mode-map (kbd "d") 'neotree-delete-node)
+;; (evil-define-key 'normal neotree-mode-map (kbd "h") 'neotree-hidden-file-toggle)
 
-(evil-define-key 'normal helm-ag-mode-map (kbd "q") 'quit-window)
-(evil-define-key 'normal helm-ag-mode-map (kbd "o") 'helm-ag-mode-jump-other-window)
-(evil-mode 1)
+;; (evil-define-key 'normal helm-ag-mode-map (kbd "q") 'quit-window)
+;; (evil-define-key 'normal helm-ag-mode-map (kbd "o") 'helm-ag-mode-jump-other-window)
+;; (evil-mode 1)
 
 ;; markdown
+;;; install multimarkdown cli
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
