@@ -40,6 +40,12 @@
 ;; ansi-term
 (setq term-buffer-maximum-size 0)
 
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 ;; UI
 (global-linum-mode t)
 (when (window-system)
