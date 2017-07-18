@@ -9,3 +9,7 @@ ln -sn ~/code/dotfiles/emacs.d ~/.emacs.d
 
 # emacs markdown-mode
 brew install multimarkdown
+
+# emacs github flavored markdown preview
+brew install node
+npm install -g vmd

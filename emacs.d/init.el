@@ -443,7 +443,12 @@ Version 2017-01-27"
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
-;;; Dependency: multimarkdown cli
+;; Dependencies: node.js, vmd
+;; for github flavored markdown preview
+(use-package vmd-mode
+  :ensure t)
+
+;; Dependency: multimarkdown cli
 (use-package markdown-preview-mode
   :ensure t)
 
