@@ -446,6 +446,10 @@ Version 2017-01-27"
 (use-package markdown-preview-mode
   :ensure t)
 
+;; coffee-mode
+(use-package coffee-mode
+  :ensure)
+(custom-set-variables '(coffee-tab-width 2))
 
 (provide 'init)
 ;;; init.el ends here
