@@ -435,7 +435,6 @@ Version 2017-01-27"
 ;; (evil-mode 1)
 
 ;; markdown
-;;; install multimarkdown cli
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
@@ -444,6 +443,7 @@ Version 2017-01-27"
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+;;; Dependency: multimarkdown cli
 (use-package markdown-preview-mode
   :ensure t)
 
