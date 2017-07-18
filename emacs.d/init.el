@@ -26,6 +26,9 @@
 (setq tab-width 2)
 (setq standard-indent 2)
 
+;; warn when opening files bigger than 100MB
+(setq large-file-warning-threshold 100000000)
+
 ;; js mode
 (setq js-indent-level 2)
 
