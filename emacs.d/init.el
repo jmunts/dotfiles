@@ -214,6 +214,11 @@
   (add-hook 'js-mode-hook     'smartparens-strict-mode)
   :diminish smartparens-mode)
 
+(bind-keys
+ :map smartparens-mode-map
+ ("M-[" . sp-backward-unwrap-sexp)
+ ("M-]" . sp-unwrap-sexp))
+ 
 ;; slim
 (use-package slim-mode
   :ensure t)
