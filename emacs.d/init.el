@@ -471,5 +471,16 @@ Version 2017-01-27"
   :ensure)
 (custom-set-variables '(coffee-tab-width 2))
 
+;; custom functions
+(defun toggle-maximize-buffer () "Maximize buffer"
+  (interactive)
+  (if (= 1 (length (window-list)))
+      (jump-to-register '_) 
+    (progn
+      (window-configuration-to-register '_)
+      (delete-other-windows))))
+
+(global-set-key [(super shift return)] 'toggle-maximize-buffer) 
+
 (provide 'init)
 ;;; init.el ends here
