@@ -20,6 +20,8 @@
 
 (require 'use-package)
 
+(delete-selection-mode 1)
+
 ;; indentation
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
