@@ -2,9 +2,19 @@
   My personal dotfiles
 
 
-# Installation
+# Prerequisites
+### Ag
 ```
 brew install the_silver_searcher
+```
+
+### fzf
+On OS X, using Homebrew
+```
+brew install fzf
+
+# Install shell extensions
+/usr/local/opt/fzf/install
 ```
 
 ## OSX
