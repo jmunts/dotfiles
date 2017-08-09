@@ -482,7 +482,11 @@ Version 2017-01-27"
       (window-configuration-to-register '_)
       (delete-other-windows))))
 
-(global-set-key [(super shift return)] 'toggle-maximize-buffer) 
+(global-set-key [(super shift return)] 'toggle-maximize-buffer)
+
+;; fzf
+(use-package fzf
+  :ensure t)
 
 (provide 'init)
 ;;; init.el ends here
