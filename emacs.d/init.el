@@ -488,5 +488,15 @@ Version 2017-01-27"
 (use-package fzf
   :ensure t)
 
+;; json-mode
+(use-package json-mode
+  :ensure t)
+
+;; code folding - yafolding
+(use-package yafolding
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'yafolding-mode))
+
 (provide 'init)
 ;;; init.el ends here
