@@ -500,5 +500,14 @@ Version 2017-01-27"
   :config
   (add-hook 'prog-mode-hook 'yafolding-mode))
 
+;; multiple cursors
+(use-package multiple-cursors
+  :ensure t)
+
+(global-set-key (kbd "C-c m c") 'mc/edit-lines) ; TODO: doesn't work, fix and re-bind
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
 (provide 'init)
 ;;; init.el ends here
