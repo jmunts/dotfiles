@@ -9,6 +9,8 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")))
 
 
+(server-start)
+
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
