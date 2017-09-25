@@ -25,3 +25,9 @@ defaults write com.apple.screencapture type jpg
 
 ## zerodark-theme for emacs
 For the icons to show, please install the fonts in [fonts/zerodark-theme](https://github.com/jmunts/dotfiles/tree/master/fonts/zerodark-theme).
+
+### OSX
+```
+mv <dotfiles_dir>/fonts/zerodark-theme/* ~/Library/Fonts
+```
+
