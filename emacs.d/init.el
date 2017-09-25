@@ -509,5 +509,11 @@ Version 2017-01-27"
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+;; undo tree
+(use-package undo-tree
+  :ensure t)
+
+(global-undo-tree-mode)
+
 (provide 'init)
 ;;; init.el ends here
