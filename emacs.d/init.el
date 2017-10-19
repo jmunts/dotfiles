@@ -30,6 +30,9 @@
 (setq tab-width 2)
 (setq standard-indent 2)
 
+;; trailing whitespace
+(setq-default show-trailing-whitespace t)
+
 ;; warn when opening files bigger than 100MB
 (setq large-file-warning-threshold 100000000)
 
