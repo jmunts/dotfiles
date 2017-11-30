@@ -531,5 +531,13 @@ Version 2017-01-27"
 (winner-mode)
 (add-hook 'ediff-after-quit-hook-internal 'winner-undo)
 
+;; vuejs
+(use-package vue-mode
+  :ensure t)
+
+;; auto complete
+(use-package auto-complete
+  :ensure t)
+
 (provide 'init)
 ;;; init.el ends here
