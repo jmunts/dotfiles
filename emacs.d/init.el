@@ -537,7 +537,8 @@ Version 2017-01-27"
 
 ;; auto complete
 (use-package auto-complete
-  :ensure t)
+  :ensure t
+  :config (global-auto-complete-mode t))
 
 (provide 'init)
 ;;; init.el ends here
