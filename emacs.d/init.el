@@ -539,5 +539,14 @@ Version 2017-01-27"
 (use-package auto-complete
   :ensure t)
 
+;; dimmer - highlight current buffer
+(use-package dimmer
+  :ensure t
+  :init
+  (dimmer-activate)
+  :config
+  (setq dimmer-exclusion-regexp ".*helm.*"
+        dimmer-percent 0.3))
+
 (provide 'init)
 ;;; init.el ends here
