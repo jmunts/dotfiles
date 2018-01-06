@@ -53,6 +53,9 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;; use indentation in org
+(setq org-startup-indented t)
+
 ;; UI
 (global-linum-mode t)
 (when (window-system)
