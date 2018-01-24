@@ -23,6 +23,14 @@ This converts screencapture file type to jpg. For lesser file size.
 defaults write com.apple.screencapture type jpg
 ```
 
+This allows the keys to repeat when held
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+For Visual Studio Code
+```
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
 ## zerodark-theme for emacs
 For the icons to show, please install the fonts in [fonts/zerodark-theme](https://github.com/jmunts/dotfiles/tree/master/fonts/zerodark-theme).
 
